@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Eventroler-Explore Events</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- <link href="login.css" rel="stylesheet"> -->
+    <!-- <script type="text/javascript" src="login.js"></script> -->
+    <style type="text/css">
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=email],textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">EVTR</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a class="navbar-brand" href="#">
+                	<span class="glyphicon glyphicon-fire"></span> 
+                	Eventroler
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Main.php">Home</a>
+                    </li>
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Upcoming Event</a></li>
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Featured Events</a></li>
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Helpline</a></li>
+                            
+                        </ul>
+                    </li>
+                    </li>
+                    
+					<li>
+                    
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Event Type <span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="about-us">
+							<li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Cultural</a></li>
+							<li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Sports</a></li>
+							<li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Technical</a></li>
+							<li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Social Responsibility</a></li>
+						</ul>
+					</li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Department<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Computer Science</a></li>
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html"></a></li>
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Technical</a></li>
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Social Responsibility</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/contact%20us.html">About Us</a>
+                    </li>
+					
+                </ul>
+
+				<!-- Search -->	
+					<!---Login-->
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float: right;">ContactUs</button>
+					<!-- <button ><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Admin.html">Admin Log In</a> </button> -->
+					<!-- <button ><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/login.html">User Log In</a> </button> -->
+				
+
+<!--####################################################################################################################  -->
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="Main.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="uname" required>
+
+      <label for="psw"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="psw" required>
+      
+       <label for="" name="Message"><b>Message</b></label>
+       <textarea style="width: 100%;" placeholder="Enter Message"></textarea>
+
+      <button type="submit" style="background-color: grey; ">Submit</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+
+</div>
+
+
+
+<!--####################################################################################################################  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+	<div class="jumbotron feature">
+		<div class="container">
+		
+		<div id="feature-carousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+			  <li data-target="#feature-carousel" data-slide-to="0" class="active"></li>
+			  <li data-target="#feature-carousel" data-slide-to="1"></li>
+			  <li data-target="#feature-carousel" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<a href="#">
+                    	<img class="img-responsive" src="C:\Users\Anupa\Desktop\LMS iMAGE/L5.jpg" alt="">
+                	</a>
+                	<div class="carousel-caption">
+						<p>Some archives and record offices are housed in your local museum or library; others have their own stand-alone building. Wherever they are, they are a treasure trove.</p>
+					</div>
+				</div>
+				<div class="item">
+					<a href="#">
+                    	<img class="img-responsive" src="C:\Users\Anupa\Desktop\LMS iMAGE/L1.jpg" alt="">
+                	</a>
+                	<div class="carousel-caption">
+						<h3></h3>
+						<p>The library is the temple of learning, and learning has liberated more people than all the wars in history.</p>
+					</div>
+				</div>
+				<div class="item">
+					<a href="#">
+                    	<img class="img-responsive" src="C:\Users\Anupa\Desktop\LMS iMAGE/L2.jpg" alt="">
+                	</a>
+                	<div class="carousel-caption">
+					
+						<p>A library is the delivery room for the birth of ideas, a place where history comes to life.</p>
+					</div>
+				</div>			  
+			</div>
+			<a class="left carousel-control" href="#feature-carousel" role="button" data-slide="prev">
+			  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			  <span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#feature-carousel" role="button" data-slide="next">
+			  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			  <span class="sr-only">Next</span>
+			</a>
+		  </div>
+
+		</div>
+	</div>
+
+
+
+    <!-- Content -->
+    <div class="container">
+
+        <!-- Page Intro -->
+        <div class="row page-intro">
+            <div class="col-lg-12">
+                <h1>Lovely Professional University
+                    <small>Library</small>
+                </h1>
+                <p>LPU has launched what it claims as country's largest high-tech campus library.
+This nine-storey Central Library, with real equidistant approach for all the 25000+ students, has been erected spaciously on 1.5 lakh sq feet covered area, housing a rich collection of varied knowledge enhancing material. More than 1,02,846 text books, reference books are here</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Feature Row -->
+        <div class="row">
+            <article class="col-md-4 article-intro">
+                <a href="#">
+                    <img class="img-responsive img-rounded" src="C:\Users\Anupa\Desktop\LMS iMAGE\a.png" alt="">
+                </a>
+                <h3>
+                    <a href="#">LIVE IN THE SERENE PEACE OF LABORATORIES AND LIBRARIES.- LOUIS PASTEUR</a>
+                </h3>
+                <p>The atmosphere of libraries, lecture rooms and laboratories has direct relationship with effective learning. Libraries are store house of knowledge which act as a fuel for experimentation in the laboratories.
+				All the knowledge you can bank on and applying that knowledge to produce outstanding work</p>
+            </article>
+            <article class="col-md-4 article-intro">
+                <a href="#">
+                    <img class="img-responsive img-rounded" src="C:\Users\Anupa\Desktop\LMS iMAGE\b.png" alt="">
+                </a>
+                <h3>
+                    <a href="#">SUFFICIENT TO TAKE OFF YOUR DREAM....</a>
+                </h3>
+                <p>University has 9 stories academic resource building with dedicated 4 stories of library adequate to cater the students need. Campus central library is fully automated, from RFID entrance to LIBSYS software in the library making students stay more convenient as there is no long wait for issuing or depositing a book.
+Fully automatic issue- return counter / machine ensures hassle free transaction of books.</p>
+            </article>
+
+            <article class="col-md-4 article-intro">
+                <a href="#">
+                    <img class="img-responsive img-rounded" src="C:\Users\Anupa\Desktop\LMS iMAGE\c.png" alt="">
+                </a>
+                <h3>
+                    <a href="#">E-RESOURCE</a>
+                </h3>
+                <p>Library has a cyber café with 150 terminals for the users interested in e-reading.
+
+Subscription of international standard online journals and databases covering almost every discipline and having access to more than 27000 of e-journals, theses, reports. Magazines, newspapers etc.</p>
+            </article>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+	
+	<footer>
+	
+		<div class="footer-blurb">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 footer-blurb-item">
+						<img class="img-circle" src="C:\Users\Anupa\Desktop\LMS iMAGE\1f.jpg" alt="" width="90" height="90">
+						<h3>VOLUMES OF BOOKS</h3>
+					</div>
+					<div class="col-sm-4 footer-blurb-item">
+						<img class="img-circle" src="C:\Users\Anupa\Desktop\LMS iMAGE\3f.jpg" alt="" width="90" height="90">
+						<h3>DIGITAL RESOURCES</h3>
+					</div>
+					<div class="col-sm-4 footer-blurb-item">
+						<img class="img-circle" src="C:\Users\Anupa\Desktop\LMS iMAGE\2f.jpg" alt="" width="90" height="90">
+						<h3>ACCESSIBLE E-JOURNALS</h3>
+					</div>
+
+				</div>
+				<!-- /.row -->	
+			</div>
+        </div>
+        
+        <div class="small-print">
+        	<div class="container">
+        		<p>Copyright &copy; Library Management System 2018 </p>
+        	</div>
+        </div>
+	</footer>
+
+	
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="js/holder.min.js"></script>
+	
+</body>
+
+</html>
+
+<?php  
+     if(isset($_GET['submit']))
+     {
+         $con = mysqli_connect('localhost','root','','eventroler') or die('Error in connection');
+         $name = $_GET['uname'];  
+         $email = $_GET['email'];
+         $Message = $_GET['Message'];
+      
+   
+   $q = "INSERT INTO contact(Name,Email,Message) VALUES('$name','$email','$Message')";
+    $run = mysqli_query($con,$q);   
+    if(!$run)
+    {
+        echo "Error in run".mysqli_error($con);
+    }
+    else
+    {
+        echo "Susssss";
+    }
+  mysqli_close($con);
+     }  
+   
+  ?>
+
+
+
+
