@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Eventroler</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- <link href="login.css" rel="stylesheet"> -->
+    <!-- <script type="text/javascript" src="login.js"></script> -->
+    <style type="text/css">
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=email],textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">EVTR</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="Main2.php.html">
+                    <span class="glyphicon glyphicon-fire"></span> 
+                    Eventroler
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Main.php">Home</a>
+                    </li>
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Upcoming Event</a></li>
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Featured Events</a></li>
+                           
+
+                        </ul>
+                    </li>
+                    </li>
+                    
+                    <li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Department<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Computer Science</a></li>
+                            <li><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Library%20search.html">Elecronics</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="about us.html">About Us</a>
+                    </li>
+                    
+                </ul>
+
+                <!-- Search --> 
+                    <!---Login-->
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float: right;
+                    background:linear-gradient(white,grey,white); color: black; font-size: 17px; border-radius: 5px; height: 25px; line-height: 2px;">ContactUs</button>
+                    <!-- <button ><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/Admin.html">Admin Log In</a> </button> -->
+                    <!-- <button ><a href="file:///C:/Users/Anupa/Desktop/LMS%20Website/Main%20Website/login.html">User Log In</a> </button> -->
+                
+
+<!--####################################################################################################################  -->
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="Main.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="uname" required>
+
+      <label for="psw"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="psw" required>
+      
+       <label for="" name="Message"><b>Message</b></label>
+       <textarea style="width: 100%;" placeholder="Enter Message"></textarea>
+
+      <button type="submit" style="background-color: grey; ">Submit</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+
+</div>
+
+
+
+<!--####################################################################################################################  -->
+
+
+
+         
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+         
+            </div>
+        </div>
+<div class="container">
+
+        <!-- Page Intro -->
+        <div class="row page-intro">
+            <div class="col-lg-12">
+                <h1>Computer Science Engineering
+                    <small>Events and Workshops</small>
+                </h1>
+                <p>We have provided all the events and workshops for computer science engineering students, Where they can showcase their talent as well as learn something to improve skills to prepare for future events.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Feature Row -->
+        <div class="row">
+            <article class="col-md-4 article-intro">
+                <a href="#">
+                    <img class="img-responsive img-rounded" src="C:\Users\LENOVO\Desktop\eventroler image\cse1.jpg" alt="">
+                </a>
+                <h3>
+                    <a href="#">Hackathon- NIT Kurukshetra</a>
+                </h3>
+                <p>Hackathon is a 24-hour coding marathon where you'll have to choose a real-life problem statement and implement a solution for the same. Technology is not a barrier. You may choose any of the available or trending technology to implement your solution. You may develop an android app, or a web app whatever you think is most appropriate regarding the problem.</p>
+            </article>
+            <article class="col-md-4 article-intro">
+                <a href="#">
+                    <img class="img-responsive img-rounded" src="C:\Users\LENOVO\Desktop\eventroler image\bhu.jpg" alt="">
+                </a>
+                <h3>
+                    <a href="#">Technical Series Workshop- IIT BHU Varanasi</a>
+                </h3>
+                <p> What after college is organising a techinical workshop series at IIT BHU. [WAC 2018 at Spardha IIT BHU] is an event conducted by What After College – A Delhi based training firm. IIT BHU is just the event venue and is not directly associated with the workshop or the training company.</p>
+            </article>
+
+            <article class="col-md-4 article-intro">
+                <a href="#">
+                    <img class="img-responsive img-rounded" src="C:\Users\LENOVO\Desktop\eventroler image\cse2.jpg" alt="">
+                </a>
+                <h3>
+                    <a href="#">Hackathon- DIT DEHRADUN, UK</a>
+                </h3>
+                <p>
+                    Dehradun Intitute of technology is organising a hackathon under their annual fest from 01 JAN to 03 JAN, all the programming and coding enthusiats can register themselves and win exciting prizes
+                </p>
+            </article>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    
+
+    
+    <footer>
+    
+        <div class="footer-blurb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 footer-blurb-item">
+                        <img class="img-circle" src="\image\hack.png" alt="" width="90" height="90">
+                        <h3>
+                    <a href="regform.php">Hacathon</a>
+                </h3>
+                    </div>
+                    <div class="col-sm-4 footer-blurb-item">
+                        <img class="img-circle" src="image\blog.png" alt="" width="90" height="90">
+                        <h3>
+                    <a href="regform.php">Blogathon</a>
+                </h3>
+                    </div>
+                    <div class="col-sm-4 footer-blurb-item">
+                        <img class="img-circle" src="image\iot.png" alt="" width="90" height="90">
+                        <h3>
+                    <a href="regform.php">Internet of Things</a>
+                </h3>
+                    </div>
+
+                </div>
+                <!-- /.row -->  
+            </div>
+        </div>
+        
+        <div class="small-print">
+            <div class="container">
+                <p>Copyright &copy; Eventroler 2018 All rights Reserved </p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- IE10 viewport bug workaround -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    
+    <!-- Placeholder Images -->
+    <script src="js/holder.min.js"></script>
+    
+</body>
+
+</html>
